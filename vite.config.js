@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/documind-ai/',
+  base: '/documind_ai/',
   server: {
     host: "0.0.0.0",
     port: 3000,
