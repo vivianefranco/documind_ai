@@ -3,8 +3,9 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  // MUDE AQUI: de '/documind-ai/' para '/documind_ai/'
+  base: '/documind_ai/', 
   plugins: [react(), tailwindcss()],
-  base: '/documind_ai/',
   server: {
     host: "0.0.0.0",
     port: 3000,
