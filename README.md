@@ -1,80 +1,47 @@
-# DocuMind AI — RAG para Revisão de Documentos
+# 📄 DocuMind AI
 
-Sistema RAG (Retrieval-Augmented Generation) para revisão inteligente de documentos longos (100+ páginas).
+**Revisor gramatical inteligente para documentos corporativos e acadêmicos**
 
-## 🚀 Deploy no GitHub Pages
+Uma aplicação que utiliza IA (Qwen 3.7 Plus) para revisar documentos Word (.docx), 
+corrigindo gramática, melhorando clareza e coesão, enquanto preserva a formatação original.
 
-### Passo 1: Configurar o `vite.config.js`
+## 🚀 Demo ao Vivo
 
-Antes de fazer push, **edite o arquivo `vite.config.js`** e adicione a propriedade `base` com o nome do seu repositório:
+Teste a aplicação: **[DocuMind AI no Hugging Face](https://huggingface.co/spaces/vivianefranco/documind-ai)**
 
-```js
-export default defineConfig({
-  base: '/NOME-DO-SEU-REPOSITORIO/',  // ← ADICIONE ESTA LINHA
-  plugins: [react(), tailwindcss()],
-  // ... resto do config
-});
-```
+*(Você precisará de uma API Key gratuita do DashScope - [obtenha aqui](https://dashscope.console.aliyun.com/apiKey))*
 
-> ⚠️ **Importante**: Substitua `NOME-DO-SEU-REPOSITORIO` pelo nome exato do repo que você vai criar no GitHub.
-> 
-> Exemplo: se o repo se chama `documind-ai`, use `base: '/documind-ai/'`
+## ✨ Funcionalidades
 
-### Passo 2: Criar o repositório no GitHub
+- ✅ Revisão gramatical e ortográfica automática
+- ✅ Melhoria de clareza, coesão e estilo
+- ✅ Preservação completa da formatação do Word
+- ✅ Suporte a documentos longos (processamento em chunks)
+- ✅ Interface simples e intuitiva
+- ✅ Powered by Qwen 3.7 Plus (Alibaba Cloud)
 
-```bash
-# Inicialize o git (se ainda não fez)
-git init
-git add .
-git commit -m "Initial commit: DocuMind AI RAG"
+## 🛠️ Tecnologias
 
-# Crie o repo no GitHub (substitua pelo seu usuário)
-gh repo create documind-ai --public --source=. --push
-```
+- **Backend**: Python + Streamlit
+- **IA**: Qwen 3.7 Plus via DashScope API
+- **Processamento**: python-docx
+- **API**: OpenAI-compatible endpoint
 
-Ou manualmente:
-1. Vá em [github.com/new](https://github.com/new)
-2. Crie um repositório **público** com o nome desejado
-3. Siga as instruções para fazer push
+## 📦 Como Rodar Localmente
 
-### Passo 3: Ativar o GitHub Pages
+### Pré-requisitos
+- Python 3.8+
+- Conta no DashScope (https://dashscope.aliyun.com)
 
-1. No seu repositório, vá em **Settings** → **Pages**
-2. Em **Source**, selecione **GitHub Actions**
-3. Pronto! O workflow vai rodar automaticamente a cada push na branch `main`
-
-### Passo 4: Acessar o site
-
-Após o deploy (leva ~2 minutos), seu site estará disponível em:
-
-```
-https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
-```
-
-## 🛠️ Desenvolvimento Local
+### Instalação
 
 ```bash
-npm install
-npm run dev
-```
+# Clone o repositório
+git clone https://github.com/vivianefranco/documind_ai.git
+cd documind_ai/backend
 
-Acesse: http://localhost:3000
+# Instale as dependências
+pip install -r requirements.txt
 
-## 📦 Build
-
-```bash
-npm run build
-```
-
-## 🧰 Tech Stack
-
-- React 18 + TypeScript
-- Vite
-- Tailwind CSS v4
-- Framer Motion
-- Recharts
-- Lucide Icons
-
-## 📄 Licença
-
-MIT
+# Execute a aplicação
+streamlit run app.py
