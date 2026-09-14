@@ -7,15 +7,11 @@ corrigindo gramática, melhorando clareza e coesão, enquanto preserva a formata
 
 ## 🚀 Demo ao Vivo
 
-## 🚀 Demo ao Vivo
-
 A aplicação está hospedada gratuitamente no **Streamlit Community Cloud**. Teste agora mesmo:
 
 🔗 **[DocuMind AI no Streamlit](https://documindai-qwen.streamlit.app/)**
 
 *(Você precisará de uma API Key gratuita do DashScope. Veja as instruções abaixo).*
-
----
 
 ## 🔑 Como Obter sua API Key do Qwen (Gratuito)
 
